@@ -1,0 +1,121 @@
+/* Wrapper */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  font-family: 'Segoe UI', sans-serif;
+}
+.todo-list-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 30px 20px;
+}
+
+/* Card */
+.todo-list-card {
+  width: 100%;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+  color: white;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Title */
+.todo-list-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Empty Text */
+.empty-message {
+  text-align: center;
+  opacity: 0.8;
+}
+
+/* Items Container */
+.todo-items-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Single Item */
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.25);
+  transition: all 0.3s ease;
+}
+
+.todo-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Left Section */
+.todo-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.todo-date {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Delete Button */
+.delete-btn {
+  border: none;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.delete-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .todo-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .delete-btn {
+    align-self: flex-end;
+  }
+}
