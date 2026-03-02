@@ -19,7 +19,7 @@ export default function AddTodo() {
   return (
     <div className="todo-wrapper">
       <div className="todo-card">
-        <h2 className="todo-title"> Add New Todo</h2>
+        <h2 className="todo-title">✨ Add New Todo</h2>
 
         <div className="todo-form">
           {/* Text Input */}
